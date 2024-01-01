@@ -42,6 +42,6 @@ check perl
 check python3
 check sed
 check tar
-check texi2any
+check texi2any "sudo NEEDRESTART_SUSPEND=y apt install texinfo"
 check xz
 
