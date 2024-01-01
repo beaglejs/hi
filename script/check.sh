@@ -31,5 +31,5 @@ check diff
 check find
 check gawk
 sudo apt clean
-check gcc "sudo NEEDRESTART_SUSPEND=y apt install gcc --assume-yes"
+check gcc "sudo NEEDRESTART_SUSPEND=y apt install build-essential --assume-yes"
 
