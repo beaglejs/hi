@@ -6,7 +6,7 @@ function throw {
 }
 
 function check {
-    v=$($1 --version 2>&1 | head -n1 | grep -E -o '[0-9]+\.[0-9\.]+' | head -n1)
+    v=$($1 --version 2>&1 | grep -E -o '[0-9]+\.[0-9\.]+' | head -n1)
     if [ "$v" != "" ]; then
         echo "$1 version $v"
     else
