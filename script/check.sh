@@ -23,7 +23,7 @@ sed '' /dev/null || throw "sed not working"
 sort /dev/null || throw "sort not working"
 
 sudo apt update
-sudo NEEDRESTART_SUSPEND=y apt -o Dir::Cache=$PWD -o Dir::Cache::archives=$PWD/archives install build-essential 
+sudo NEEDRESTART_SUSPEND=y apt -o Dir::Cache=$PWD -o Dir::Cache::archives=$PWD/archives -o APT::Sandbox::User=root install build-essential 
 check sort
 check bash
 check ld
