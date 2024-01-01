@@ -31,5 +31,5 @@ check diff
 check find
 check gawk
 sudo apt clean
-check gcc "sudo NEEDRESTART_SUSPEND=y apt -o Dir::Cache=$PWD -o Dir::Cache::archives=./ install build-essential --assume-yes"
+check gcc "sudo NEEDRESTART_SUSPEND=y apt -o Dir::Cache=$PWD -o Dir::Cache::archives=$PWD/archives install gcc --assume-yes"
 
