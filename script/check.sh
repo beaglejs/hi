@@ -22,6 +22,7 @@ grep --version > /dev/null 2> /dev/null || throw "grep not working"
 sed '' /dev/null || throw "sed not working"
 sort /dev/null || throw "sort not working"
 
+sudo apt update
 check sort
 check bash
 check ld
@@ -29,4 +30,5 @@ check bison "sudo apt install bison --assume-yes"
 check diff
 check find
 check gawk
-check gcc "sudo apt install gcc --assume-yes"
+check gcc "sudo DEBIAN_FRONTEND=noninteractive apt install gcc --assume-yes"
+
