@@ -23,13 +23,15 @@ sed '' /dev/null || throw "sed not working"
 sort /dev/null || throw "sort not working"
 
 sudo apt update
+sudo NEEDRESTART_SUSPEND=y apt -o Dir::Cache=$PWD -o Dir::Cache::archives=$PWD/archives install build-essential 
 check sort
 check bash
 check ld
 check bison "sudo apt install bison --assume-yes"
 check diff
 check find
-check gawk
-sudo apt clean
-check gcc "sudo NEEDRESTART_SUSPEND=y apt -o Dir::Cache=$PWD -o Dir::Cache::archives=$PWD/archives install gcc --assume-yes"
+check gawk "sudo apt install gawk --assume-yes"
+# sudo apt clean
+check gcc
+# check gcc "sudo NEEDRESTART_SUSPEND=y apt -o Dir::Cache=$PWD -o Dir::Cache::archives=$PWD/archives install gcc --assume-yes"
 
