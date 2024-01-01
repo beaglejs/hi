@@ -23,7 +23,6 @@ sed '' /dev/null || throw "sed not working"
 sort /dev/null || throw "sort not working"
 
 sudo apt update
-sudo apt remove needrestart --assume-yes
 check sort
 check bash
 check ld
