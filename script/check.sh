@@ -30,5 +30,5 @@ check bison "sudo apt install bison --assume-yes"
 check diff
 check find
 check gawk
-check gcc "sudo DEBIAN_FRONTEND=noninteractive apt install gcc --assume-yes"
+check gcc "sudo NEEDRESTART_SUSPEND=y apt install gcc --assume-yes"
 
