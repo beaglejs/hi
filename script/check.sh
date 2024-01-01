@@ -27,11 +27,11 @@ sudo NEEDRESTART_SUSPEND=y apt -o Dir::Cache=$PWD -o Dir::Cache::archives=$PWD/a
 check sort
 check bash
 check ld
-check bison "sudo apt install bison --assume-yes"
+check bison "sudo NEEDRESTART_SUSPEND=y apt install bison --assume-yes"
 check diff
 check find
-check gawk "sudo apt install gawk --assume-yes"
+check gawk "sudo NEEDRESTART_SUSPEND=y apt install gawk --assume-yes"
 # sudo apt clean
-check gcc
+check gcc "sudo NEEDRESTART_SUSPEND=y apt install gcc --assume-yes"
 # check gcc "sudo NEEDRESTART_SUSPEND=y apt -o Dir::Cache=$PWD -o Dir::Cache::archives=$PWD/archives install gcc --assume-yes"
 
