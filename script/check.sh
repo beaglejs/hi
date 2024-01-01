@@ -45,3 +45,10 @@ check tar
 check texi2any "sudo NEEDRESTART_SUSPEND=y apt install texinfo --assume-yes"
 check xz
 
+# kernel version
+uname -r | grep -E -o '^[0-9\.]+'
+
+if mount | grep -q "devpts on /dev/pts" && [ -e /dev/ptmx ]
+then
+    echo "linux kernel supports unix 98 pty"
+if
