@@ -24,7 +24,7 @@ sort /dev/null || throw "sort not working"
 
 sudo apt update
 mkdir tmp
-sudo NEEDRESTART_SUSPEND=y TMPDIR=$PWD/tmp apt -o Dir::Cache=$PWD -o Dir::Cache::archives=$PWD/archives -o APT::Sandbox::User=root install build-essential 
+sudo NEEDRESTART_SUSPEND=y TMPDIR=$PWD/tmp apt -o Dir::Cache=$PWD -o Dir::Cache::archives=$PWD/archives -o APT::Sandbox::User=root install build-essential --assume-yes
 check sort
 check bash
 check ld
@@ -33,5 +33,15 @@ check diff
 check find
 check gawk "sudo NEEDRESTART_SUSPEND=y apt install gawk --assume-yes"
 check gcc "sudo NEEDRESTART_SUSPEND=y apt install gcc --assume-yes"
-
+check g++
+check grep
+check m4
+check make
+check patch
+check perl
+check python3
+check sed
+check tar
+check texi2any
+check xz
 
