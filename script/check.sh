@@ -57,3 +57,5 @@ if printf "int main(){}" | g++ -x c++ -
 then
     echo "compiler is working"
 fi
+
+rm a.out
