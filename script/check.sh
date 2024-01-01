@@ -52,3 +52,8 @@ if mount | grep -q "devpts on /dev/pts" && [ -e /dev/ptmx ]
 then
     echo "linux kernel supports unix 98 pty"
 fi
+
+if printf "int main(){}" | g++ -x c++ -
+then
+    echo "compiler is working"
+fi
